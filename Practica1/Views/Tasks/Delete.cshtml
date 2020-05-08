@@ -1,0 +1,67 @@
+﻿@model Practica1.Models.Task
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+    <title>Eliminar</title>
+
+
+    <h3>Seguro que quieres eliminar?</h3>
+    <div>
+        <hr />
+        <dl class="list-group-item">
+            <dt>
+               Materia
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+    
+            <dt>
+                Descripcion
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+    
+            <dt>
+                Inicio
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StartDate)
+            </dd>
+    
+            <dt>
+                Culminacion
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EndDate)
+            </dd>
+    
+            <dt>
+                Estado
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Eliminar" class="btn btn-default" /> |
+                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-sm btn-danger" })
+            </div>
+        }
+    </div>
+

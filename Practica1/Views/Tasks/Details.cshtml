@@ -1,0 +1,63 @@
+﻿@model Practica1.Models.Task
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Informacion</h2>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+    <div>
+        <h4>Materia</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Materia
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+    
+            <dt>
+                Descripcion
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+    
+            <dt>
+                Inicio
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StartDate)
+            </dd>
+    
+            <dt>
+                Culminacion
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EndDate)
+            </dd>
+    
+            <dt>
+                Estado
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-sm btn-danger" })
+    </p>
+

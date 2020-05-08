@@ -1,0 +1,42 @@
+﻿@model Practica1.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Informacion</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="list-group" >
+        <dt>
+           Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            Telefono
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-sm btn-danger" })
+</p>
